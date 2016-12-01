@@ -11,6 +11,6 @@ namespace SmartHouse
 
         void SetMediumBrightness();
 
-        void SetHightBrightness();
+        void SetHighBrightness();
     }
 }

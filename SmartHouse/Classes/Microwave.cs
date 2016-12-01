@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Fridge : ISwitchable, IInfoable, ITemperaturable
+    public class Microwave : IInfoable, ISwitchable, IPowerable
     {
         public void On()
         {
@@ -13,6 +13,16 @@ namespace SmartHouse
         }
 
         public void Off()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PowerUp()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PowerDown()
         {
             throw new NotImplementedException();
         }

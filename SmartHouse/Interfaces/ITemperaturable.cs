@@ -7,6 +7,12 @@ namespace SmartHouse
 {
     public interface ITemperaturable
     {
-        void SetTemperature();
+        int Temperature
+        {
+            get;
+            set;
+        }
+        void TemperatureUp();
+        void TemperatureDown();
     }
 }

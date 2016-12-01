@@ -5,9 +5,14 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Microwave : IInfoable, ISwitchable, IPowerable
+    public class Cleaner : IPowerable, ISwitchable, IInfoable
     {
-        public void Info()
+        public void PowerUp()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PowerDown()
         {
             throw new NotImplementedException();
         }
@@ -18,16 +23,6 @@ namespace SmartHouse
         }
 
         public void Off()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PowerUp()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PowerDown()
         {
             throw new NotImplementedException();
         }

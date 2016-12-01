@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class TV : ISwitchable, IVolumable, IBrightable, IInfoable, IChanelable
+    public class TV : ISwitchable, IVolumable, IBrightable, IChanelable
     {
         private bool state;
         public void On()
@@ -17,7 +17,7 @@ namespace SmartHouse
             state = false;
         }
 
-        public void Info()
+        public override string ToString()
         {
             throw new NotImplementedException();
         }

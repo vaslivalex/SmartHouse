@@ -1,4 +1,4 @@
-﻿namespace SmartHouse.Enams
+﻿namespace SmartHouse.Enums
 {
         public enum BrightnessLevel
     {

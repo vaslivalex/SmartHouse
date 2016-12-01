@@ -5,18 +5,8 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Cleaner : IPowerable, ISwitchable, IInfoable
+    public class Fridge : ISwitchable, IInfoable, ITemperaturable
     {
-        public void PowerUp()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PowerDown()
-        {
-            throw new NotImplementedException();
-        }
-
         public void On()
         {
             throw new NotImplementedException();
@@ -27,7 +17,24 @@ namespace SmartHouse
             throw new NotImplementedException();
         }
 
-        public void Info()
+        public int Temperature
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void TemperatureUp()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TemperatureDown()
         {
             throw new NotImplementedException();
         }

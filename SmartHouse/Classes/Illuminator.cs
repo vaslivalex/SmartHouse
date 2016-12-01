@@ -1,4 +1,4 @@
-﻿using SmartHouse.Enams;
+﻿using SmartHouse.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +35,7 @@ namespace SmartHouse
         {
             brightness = BrightnessLevel.High;
         }
-        public string Info()
+        public override string ToString()
         {
             string state;
             if (this.state)

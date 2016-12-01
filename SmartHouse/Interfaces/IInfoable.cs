@@ -7,6 +7,6 @@ namespace SmartHouse
 {
     public interface IInfoable
     {
-        string Info();
+        override string ToString();
     }
 }
