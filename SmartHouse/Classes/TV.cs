@@ -2,27 +2,65 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SmartHouse.Enums;
+
 
 namespace SmartHouse
 {
-    public class TV : ISwitchable, IVolumable, IBrightable, IChanelable
+    public class TV : Device, IVolumable, IBrightable, IChanelable
     {
-        private bool state;
-        public void On()
+        private BrightnessLevel brightness;
+        private VolumeLevel volume;
+        private byte chanel;
+        public TV (bool state, BrightnessLevel brightness, byte chanel)
+            :base()
         {
-            state = true;
+            this.State = state;
+            this.brightness = brightness;
+            this.Chanel = chanel;
         }
-        public void Off()
+        public void SetLowBrightness()
         {
-            state = false;
+            brightness = BrightnessLevel.Low;
         }
-
+        public void SetMediumBrightness()
+        {
+            brightness = BrightnessLevel.Medium;
+        }
+        public void SetHighBrightness()
+        {
+            brightness = BrightnessLevel.High;
+        }
         public override string ToString()
         {
-            throw new NotImplementedException();
+            string state;
+            if (this.State)
+            {
+                state = "включен";
+            }
+            else
+            {
+                state = "выключен";
+            }
+            string brightness;
+            if (this.brightness == BrightnessLevel.Low)
+            {
+                brightness = "слабая";
+            }
+            else if (this.brightness == BrightnessLevel.Medium)
+            {
+                brightness = "средняя";
+            }
+            else
+            {
+                brightness = "высокая";
+            }
+            byte chanel;
+            if ()
+            return "Состояние: " + state + ", яркость: " + brightness + ", текущий канал: " + ;
         }
 
-        public int Chanel
+        public byte Chanel
         {
             get
             {
@@ -36,12 +74,22 @@ namespace SmartHouse
 
         public void ChanelUp()
         {
-            throw new NotImplementedException();
+            Chanel++;
         }
 
         public void ChanelDown()
         {
-            throw new NotImplementedException();
+            Chanel--;
+        }
+
+        public void VolumeUp()
+        {
+            volume++; 
+        }
+
+        public void VolumeDown()
+        {
+            volume--;
         }
     }
 }

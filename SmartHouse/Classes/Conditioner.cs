@@ -5,15 +5,27 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Conditioner : ISwitchable
+    public class Conditioner : Device, ITemperaturable
     {
 
-        public void On()
+        public int Temperature
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void TemperatureUp()
         {
             throw new NotImplementedException();
         }
 
-        public void Off()
+        public void TemperatureDown()
         {
             throw new NotImplementedException();
         }

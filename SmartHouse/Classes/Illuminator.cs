@@ -6,22 +6,14 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Illuminator : ISwitchable, IBrightable, IInfoable
+    public class Illuminator : Device, IBrightable
     {
-        private bool state;
         private BrightnessLevel brightness;
         public Illuminator(bool state, BrightnessLevel brightness)
+            :base()
         {
-            this.state = state;
+            this.State = state;
             this.brightness = brightness;
-        }
-        public void On()
-        {
-            state = true;
-        }
-        public void Off()
-        {
-            state = false;
         }
         public void SetLowBrightness()
         {
@@ -38,7 +30,7 @@ namespace SmartHouse
         public override string ToString()
         {
             string state;
-            if (this.state)
+            if (this.State)
             {
                 state = "включен";
             }

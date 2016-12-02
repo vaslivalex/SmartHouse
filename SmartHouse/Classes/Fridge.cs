@@ -5,18 +5,8 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Fridge : ISwitchable, IInfoable, ITemperaturable
+    public class Fridge : Device, ISwitchable, ITemperaturable
     {
-        public void On()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Off()
-        {
-            throw new NotImplementedException();
-        }
-
         public int Temperature
         {
             get

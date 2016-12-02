@@ -5,18 +5,8 @@ using System.Text;
 
 namespace SmartHouse
 {
-    public class Microwave : IInfoable, ISwitchable, IPowerable
+    public class Microwave : Device, ISwitchable, IPowerable
     {
-        public void On()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Off()
-        {
-            throw new NotImplementedException();
-        }
-
         public void PowerUp()
         {
             throw new NotImplementedException();
